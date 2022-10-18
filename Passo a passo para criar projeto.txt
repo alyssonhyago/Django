@@ -1,0 +1,38 @@
+Etapas para criar um projeto em Django
+
+#1 Passo - Instale no virtual venv o django 
+pip install django
+
+#2 Passo - crie o django admin
+django-admin startproject projeto .
+
+#3 Passo Criar um app
+
+python manager.py startapp 'nomedoapp'
+
+#4 Passo Registrar o app
+
+Setting: 'nomedaapp.apps.BlogConfig',
+
+from django.urls import path, include
+urls: path('nomedoapp/', include('blog.urls'))
+
+#5 Passo Crie a pasta urls no modulo app criado
+
+from django.urls import path
+from . import views
+
+urlpatters = [
+	path('', views.index)
+]
+
+Crie o método dentro de views
+from django.shortcuts import render
+from django.http import httpResponse
+
+def index(request):
+    return HttpResponse('Olá mundo')
+
+6 Passo Executar o projeto
+
+python manage.py runserver

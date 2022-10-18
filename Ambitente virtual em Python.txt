@@ -1,0 +1,19 @@
+
+#Instalação
+pip install virtualenv
+
+#Cria o ambiente 
+
+python -m venv 'nome_do_ambiente'
+
+#libera o acesso em windowns powershell admin, digite o comando:
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+#Ativar o ambiente virtual
+
+./venv/Scripts/Activate.ps1
+
+#Desativar
+
+deactivate
